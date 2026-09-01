@@ -1,7 +1,15 @@
 [project]
-name = "my_project"
+name = "kafka-tutorial"
 version = "0.0.1"
-description = "Add your description here"
+description = "A lightweight local Kafka pizza-order demo"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "confluent-kafka[avro,schemaregistry]>=2.15.0",
+    "jupyterlab>=4.6.3",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.16.5",
+]
